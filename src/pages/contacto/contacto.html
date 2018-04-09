@@ -1,0 +1,52 @@
+<ion-header>
+  <!-- Creo el menu lateral (sidemenu) -->
+  <ion-navbar color="color1">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons  end>
+      <button ion-button icon-only (click)="compartir()">
+        <ion-icon name="md-share"></ion-icon>
+      </button>  
+    </ion-buttons>
+
+    <ion-title>
+      <img alt="logo" height="39" src="assets/imgs/topcantabria.png">
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="contactopage">
+  <h1>
+    Top Cantabria FM
+  </h1>
+  <div class="hr"> </div>
+  <p>
+    Si quieres contactar con nosotros puedes hacerlo por teléfono o bien enviarnos un email
+  </p>
+  <br>
+  <div class="hr"> </div>
+  <!-- Este es el boton de la llamada -->
+  <button ion-button block color="color3" (click)="llamar('658367555')">
+    <ion-icon name="call"></ion-icon>
+  </button>
+  <!-- Este es el boton de enviar el email -->
+  <div class="hr"> </div>  
+  <button ion-button block  color="color3" (click)="enviarEmail()">
+    <ion-icon name="mail"></ion-icon>
+  </button>
+  <div class="hr"> </div>
+  <br>
+  <br>
+  <h4>
+    Estamos en:
+  </h4>
+  <p>
+    C/ José Mª Pereda, 44 - 1ºF,
+    <br> Torrelavega - Cantabria
+  </p>
+
+  <!-- Aquí iría la ubicación de la radio (Maps) -->
+
+</ion-content>

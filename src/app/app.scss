@@ -1,0 +1,26 @@
+
+ion-icon {
+    &[class*="topCantabria-"]{
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    &[class*="topCantabria-radio"] {
+        mask-image: url(../assets/imgs/radio.png);
+    }
+    &[class*="topCantabria-web"] {
+        mask-image: url(../assets/imgs/web.png);
+    }
+    &[class*="topCantabria-contacto"] {
+        mask-image: url(../assets/imgs/contacto.png);
+    }
+}
+.menuPage {
+   background-color: #112D4E;
+}
+h3{
+    color: white;
+}
