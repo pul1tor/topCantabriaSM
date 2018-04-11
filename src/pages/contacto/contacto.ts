@@ -71,10 +71,6 @@ export class ContactoPage {
       title: 'Envienos un correo',
       inputs: [
         {
-          name: 'email',
-          placeholder: 'ejemplo@ejemplo.ejemplo'
-        },
-        {
           name: 'asunto',
           placeholder: 'Asunto del email'
         },
@@ -86,7 +82,7 @@ export class ContactoPage {
         text: 'Enviar',
         handler: data => {
           //Aqui es donde compruebo que se han rellenado los inputs y envio el email
-          this.send(data.email, data.asunto, data.detalle);
+          this.send(data.asunto, data.detalle);
 
         }
       },
@@ -106,17 +102,13 @@ export class ContactoPage {
 
   /**
    * 
-   * @param vEmail es el email del usuario
    * @param vAsunto es el asunto que va en el email
    * @param vDetalle es el detalle que va en el email
    * Mediante este metodo y los 3 parametros que le paso lo que hago es enviar el 
    * correo a la cuenta donde esta el "to"
    */
-  send(vEmail, vAsunto, vDetalle) {
-    if (vEmail == "") {
-      console.error("Error no escribio su Email");
-
-    } else if (vAsunto == "") {
+  send(vAsunto, vDetalle) {
+    if (vAsunto == "") {
       console.error("Error no escribio el asunto");
 
     } else if (vDetalle == "") {
@@ -126,13 +118,12 @@ export class ContactoPage {
       let email = {
         to: 'javipulitor@hotmail.com',
         //a: info@topcantabriafm.com
-        cc: vEmail,
         subject: vAsunto,
         body: vDetalle,
         isHtml: true
 
       };
-      
+
       this.emailComposer.open(email);
 
     }
