@@ -1,6 +1,6 @@
 {
   "name": "topCantabriaSM",
-  "app_id": "",
+  "app_id": "4d931569",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

@@ -19,11 +19,18 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 })
 export class ContactoPage {
   vError: string;
+  //imagen:string = '../assets/imgs/topcantabriaCompartir.jpg';
+  //https://imgur.com/gjDearO
 
   constructor(private socialSharing: SocialSharing, private vLlamada: CallNumber, private emailComposer: EmailComposer, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
     this.emailComposer = emailComposer;
   }
 
+  /**
+   * 
+   * @param message Es el mensaje que creo yo a mano dependiendo del tipo de error que ocurra 
+   * Este método lo que hace es presentar un alertBox cuando un error aparezca.
+   */
   presentConfirm(message: string) {
     let alert = this.alertCtrl.create({
       title: 'Error!',
@@ -46,7 +53,7 @@ export class ContactoPage {
    * respectivos mecanismos de "sharing" y compartirlo.
    */
   compartir() {
-    this.socialSharing.share('Hola!, me encantaría compartir esta radio contigo','','assets/imgs/topcantabria.png', 'http://www.topcantabriafm.com/').then(() => {
+    this.socialSharing.share('Hola!, me encantaría compartir esta radio contigo','topCantabriaFM!',null, 'http://www.topcantabriafm.com/').then(() => {
       
     }).catch((e) => {
       this.presentConfirm('Se ha producido este error: ' + e);

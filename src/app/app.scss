@@ -17,6 +17,9 @@ ion-icon {
     &[class*="topCantabria-contacto"] {
         mask-image: url(../assets/imgs/contacto.png);
     }
+    &[class*="topCantabria-logo"]{
+        mask-image:url(../assets/imgs/topcantabria.png);
+    }
 }
 .menuPage {
    background-color: #112D4E;
