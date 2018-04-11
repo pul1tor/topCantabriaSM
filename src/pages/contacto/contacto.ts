@@ -132,6 +132,7 @@ export class ContactoPage {
         isHtml: true
 
       };
+      
       this.emailComposer.open(email);
 
     }
